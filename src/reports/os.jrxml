@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="os" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2feeafa0-2fad-4b80-bdae-9fc40af2f450">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="295"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="os" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select*from tbos where os = $P{os}]]>
+	</queryString>
+	<field name="os" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_os" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roteiro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pedido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="vendedor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="motorista" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="veiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataEtrega" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idcli" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="97" height="47" uuid="301c3988-3c95-447a-a70e-c82bfebd9f5a"/>
+				<imageExpression><![CDATA["C:\\Users\\Pichau\\Desktop\\pescaveis_logo.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="685" y="14" width="100" height="20" uuid="65e24553-315e-4f98-b8d3-823dc415a266"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="e9a5d15a-68dc-4cca-a5d2-56bfd6769b1b"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº Roteiro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="20" width="100" height="20" uuid="224aae8e-c0de-4a46-a18f-3e07a7506dd0"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Motorista:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="20" width="181" height="20" uuid="13d0d903-94cb-404d-b77a-440561a61934"/>
+				<textFieldExpression><![CDATA[$F{motorista}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="40" width="100" height="20" uuid="612caa2e-447e-4015-8b71-4a25b37bf568"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Veículo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="40" width="181" height="20" uuid="4e6c0e11-2700-4e59-8f2b-397fc5ceb322"/>
+				<textFieldExpression><![CDATA[$F{veiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="181" height="20" uuid="33ec0079-d844-44a6-bc3d-237f49d7b0e8"/>
+				<textFieldExpression><![CDATA[$F{os}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="100" height="20" uuid="7ce03909-04a7-498f-b495-707d391e9592"/>
+				<text><![CDATA[data_os]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="2" width="100" height="20" uuid="4f895a75-aa57-43d4-8b66-66c80a016d8f"/>
+				<text><![CDATA[roteiro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="2" width="100" height="20" uuid="de232005-3f33-4994-b787-0252a1a80ec3"/>
+				<text><![CDATA[pedido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="2" width="100" height="20" uuid="9ced3b53-1447-42f8-92a5-8d303e15e174"/>
+				<text><![CDATA[vendedor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="2" width="100" height="20" uuid="74f52495-8469-4ccc-b904-ac25d64ded30"/>
+				<text><![CDATA[rota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="2" width="100" height="20" uuid="69b96da3-421c-4430-8b19-fa24a38a90ea"/>
+				<text><![CDATA[dataEtrega]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="2" width="100" height="20" uuid="cce94edb-d177-41cc-84f4-b175aa331e61"/>
+				<text><![CDATA[tipo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="8c8aaa1a-dcef-4cf7-b030-c2bba142b155"/>
+				<textFieldExpression><![CDATA[$F{data_os}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="6cd86c0e-5aba-44e5-b878-ffba7d7d82fd"/>
+				<textFieldExpression><![CDATA[$F{roteiro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="75315716-0a98-445a-8113-32e7131988de"/>
+				<textFieldExpression><![CDATA[$F{pedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="8456641b-8c20-460f-bf30-ce9793fdb79a"/>
+				<textFieldExpression><![CDATA[$F{vendedor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="992a3a6a-d539-464c-8692-685f733bc3d2"/>
+				<textFieldExpression><![CDATA[$F{rota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="906bcf0f-8a9f-410f-b9ae-9f09a23933d3"/>
+				<textFieldExpression><![CDATA[$F{dataEtrega}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="622da85d-f334-4c3b-b637-1fc1373b3547"/>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

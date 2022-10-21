@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="roteiro" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fbb61fb5-ee7d-4cca-81b7-fb102ffe0d66">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select
+OSER.os,data_os,tipo,roteiro,motorista,veiculo,rota,dataEtrega,
+CLI.nomecli,ufcli,cidadecli,bairrocli,enderecocli,cepcli
+from tbos as OSER
+inner join tbclientes as CLI
+on (CLI.idcli = OSER.idcli);]]>
+	</queryString>
+	<field name="os" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data_os" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="roteiro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="motorista" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="veiculo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataEtrega" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomecli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ufcli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidadecli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bairrocli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="enderecocli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cepcli" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="os">
+		<groupExpression><![CDATA[$F{os}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="113" height="28" uuid="d1891f2e-188d-4f22-9bf6-ed817c5685a1"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Rota]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="62" height="20" uuid="390b4360-5eae-4881-8538-9431ee444d5f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[roteiro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="0" width="51" height="20" uuid="2d1468a8-7814-47f3-bc3a-8e3d235fbd8a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[motorista]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="113" y="0" width="134" height="20" uuid="3c2899f9-cd3f-4eb7-9220-9fae59f31681"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[veiculo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="0" width="64" height="20" uuid="b2a62c8c-49c8-447a-9337-bcaae0256e5b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[rota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="49" height="20" uuid="c0c94903-5125-41aa-9b95-3dafdfb4d722"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="23" height="20" uuid="97dfaa64-f000-4a48-bca2-f077da2e792f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="383" y="0" width="59" height="20" uuid="dd760f45-4aec-46e1-bd4e-210121704a3d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="0" width="100" height="20" uuid="1ce30ce6-12d0-496b-8857-65646d85282a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bairro]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="62" height="20" uuid="a569e213-8f71-4e6d-8340-3060b07acc15"/>
+				<textFieldExpression><![CDATA[$F{roteiro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="0" width="51" height="20" uuid="ce9ac3e4-cacd-456b-ac91-98cd6e2899b3"/>
+				<textFieldExpression><![CDATA[$F{motorista}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="113" y="0" width="134" height="20" uuid="57126996-a18d-4d99-9569-ebf354b32747"/>
+				<textFieldExpression><![CDATA[$F{veiculo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="0" width="64" height="20" uuid="08f3c956-695e-494d-b955-dbc059455433"/>
+				<textFieldExpression><![CDATA[$F{rota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="0" width="49" height="20" uuid="38aaf123-d49d-497e-b891-5ffb7e61e345"/>
+				<textFieldExpression><![CDATA[$F{nomecli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="23" height="20" uuid="5b36ef9c-d41d-4f79-bbbc-fca6b359a783"/>
+				<textFieldExpression><![CDATA[$F{ufcli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="0" width="59" height="20" uuid="8865bd69-04ee-4f44-8054-49dcfc669677"/>
+				<textFieldExpression><![CDATA[$F{cidadecli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="0" width="100" height="20" uuid="ee6ce61f-fd7a-4563-acf7-0a7b4f2ecc71"/>
+				<textFieldExpression><![CDATA[$F{bairrocli}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
